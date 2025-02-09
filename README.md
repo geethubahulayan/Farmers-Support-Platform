@@ -1,39 +1,28 @@
-[Project Name] 🎯
+Farmers Support Platform
 Basic Details
-Team Name: [Name]
+Team Name: Titan
 Team Members
 
-    Member 1: [Name] - [College]
-    Member 2: [Name] - [College]
-    Member 3: [Name] - [College]
+    Member 1: Amruthalakshmi P - college of engineering attingal
+    Member 2: Geethu S Bahulayan- college of engineering attingal
+    Member 3: Aleena Mary Thomas- college of engineering attingal
 
-Hosted Project Link
-
-[mention your project hosted project link here]
 Project Description
 
-[2-3 lines about what your project does]
+A secure and userfriendly registration system for the farmers support
 The Problem statement
 
-[What ridiculous problem are you solving?]
+problems faced by farmers in marketing field due to price fluctuations and middle man interference
 The Solution
 
-[How are you solving it? Keep it fun!]
+user friendly website for direct selling and price updation
 Technical Details
 Technologies/Components Used
 
 For Software:
 
-    [Languages used]
-    [Frameworks used]
-    [Libraries used]
-    [Tools used]
-
-For Hardware:
-
-    [List main components]
-    [List specifications]
-    [List tools required]
+    html,javascript,css
+    vscode
 
 Implementation
 
@@ -42,18 +31,18 @@ Installation
 
 [commands]
 Run
+C:\Users\acer\Desktop\hackathon\farmmanagement\home.html
 
-[commands]
 Project Documentation
 
 For Software:
 Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name) Add caption explaining what this shows
+https://drive.google.com/file/d/1bTz9UoPEIbc-p9iZ0V6DPezmUAdlACS7/view?usp=drive_link
 
-![Screenshot2](Add screenshot 2 here with proper name) Add caption explaining what this shows
-
-![Screenshot3](Add screenshot 3 here with proper name) Add caption explaining what this shows
+[
+]https://drive.google.com/file/d/1MkDyZoJGNHley1uU5RLIg8ecIPbnR-ch/view?usp=drive_link)
+https://drive.google.com/file/d/1rZjnDexWFDf_oPYm2yLxH9FpGst1N-eO/view?usp=drive_link
 Diagrams
 
 ![Workflow](Add your workflow/architecture diagram here) Add caption explaining your workflow
@@ -74,10 +63,7 @@ Build Photos
 
 ![Final](Add photo of final product here) Explain the final build
 Project Demo
-Video
-
-[Add your demo video link here] Explain what the video demonstrates
-Additional Demos
+https://drive.google.com/drive/folders/1wK827HC-uKlsfeTm0J3DY1LvbyyL1R7v?usp=drive_link
 
 [Add any extra demo materials/links]
 Team Contributions
