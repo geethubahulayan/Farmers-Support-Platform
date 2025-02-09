@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Sales - Seller</title>
+    <style>
+        body {
+            background-color: #e9f7df;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .feature-box {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"], input[type="tel"] {
+            padding: 8px;
+            font-size: 16px;
+            width: 200px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Direct Sales - Seller</h1>
+    </header>
+
+    <section>
+        <div class="feature-box">
+            <h2>List Your Products for Sale</h2>
+            <form id="sales-form">
+                <label for="product">Product Name:</label>
+                <input type="text" id="product" name="product" required><br><br>
+                <label for="price">Price per Unit ($):</label>
+                <input type="number" id="price" name="price" required><br><br>
+                <label for="quantity">Quantity Available:</label>
+                <input type="number" id="quantity" name="quantity" required><br><br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
+                <button type="submit">List Product for Sale</button>
+            </form>
+            <br>
+            <a href="buyer.html">Go to Buyer Page</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Farmers Support Platform. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("sales-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const product = document.getElementById("product").value;
+            const price = document.getElementById("price").value;
+            const quantity = document.getElementById("quantity").value;
+            const phone = document.getElementById("phone").value;
+
+            if (product && price && quantity && phone) {
+                // Get the current products from localStorage
+                let products = JSON.parse(localStorage.getItem('products')) || [];
+
+                // Add the new product to the array
+                const newProduct = {
+                    name: product,
+                    price: price,
+                    quantity: quantity,
+                    phone: phone
+                };
+                products.push(newProduct);
+
+                // Save the updated products list to localStorage
+                localStorage.setItem('products', JSON.stringify(products));
+
+                alert("Product listed for sale: " + product + " | Price: $" + price + " | Quantity: " + quantity + " units");
+
+                // Reset the form
+                document.getElementById("sales-form").reset();
+            } else {
+                alert("Please fill in all fields.");
+            }
+        });
+    </script>
+
+</body>
+</html>

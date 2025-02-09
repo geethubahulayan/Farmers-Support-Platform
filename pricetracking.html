@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Tracking - Farmers Support Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Price Tracking</h1>
+    </header>
+
+    <!-- Price Tracking Feature -->
+    <section>
+        <div class="feature-box">
+            <h2>Track Market Prices</h2>
+            <p>Monitor current market prices for crops and products to avoid price fluctuations and plan sales effectively.</p>
+            <div class="price-info">
+                <div>Current Price for Wheat: $<span id="wheat-price">0.00</span> per kg</div>
+                <div>Current Price for Rice: $<span id="rice-price">0.00</span> per kg</div>
+                <div>Current Price for Corn: $<span id="corn-price">0.00</span> per kg</div>
+            </div>
+            <button onclick="updatePriceInfo()">Update Prices</button>
+            <div class="price-info">
+                <h2>price-info</h2>
+                <form action="/submit" method="POST">
+                    <div class="input-group">
+                        <label for="price of rice">price of rice</label>
+                        <input type="text" id="price of rice" name="price of rice" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="price of wheat">price of wheat</label>
+                        <input type="text" id="price of wheat" name="price of wheat" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="price of corn">price of corn</label>
+                        <input type="text" id="price of corn" name="price of corn" required>
+                    </div>
+                    <div> 
+                        <input type="submit" value="submit">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Farmers Support Platform. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Dummy function to simulate updating prices
+        function updatePriceInfo() {
+            
+        }
+    </script>
+
+</body>
+</html>
+

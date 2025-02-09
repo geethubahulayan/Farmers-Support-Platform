@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Farmers Support Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f9e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signup-form" onsubmit="return signUpUser()">
+            <input type="text" id="fullname" placeholder="Enter Full Name" required><br>
+            <input type="text" id="username" placeholder="Create Username" required><br>
+            <input type="password" id="password" placeholder="Create Password" required><br>
+            <input type="email" id="email" placeholder="Enter Email" required><br>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html" class="switch-link">Login</a></p>
+    </div>
+
+    <script>
+        function signUpUser() {
+            var fullname = document.getElementById('fullname').value;
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var email = document.getElementById('email').value;
+
+            // Store user data in localStorage
+            localStorage.setItem('fullname', fullname);
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+            localStorage.setItem('email', email);
+            
+
+            alert('Sign Up Successful! Please login.');
+
+            // Redirect to login page after signup
+            window.location.href = 'login.html';
+            return false; // Prevent form submission
+        }
+    </script>
+
+</body>
+</html>

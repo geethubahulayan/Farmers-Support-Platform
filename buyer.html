@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Sales - Buyer</title>
+    <style>
+        body {
+            background-color: #e9f7df;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-box {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #4CAF50;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Direct Sales - Buyer</h1>
+    </header>
+
+    <section>
+        <div class="feature-box">
+            <h2>Available Products for Sale</h2>
+            <div id="product-list"></div>
+            <br>
+            <a href="seller.html">Go to Seller Page</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Farmers Support Platform. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            // Get products from localStorage
+            const products = JSON.parse(localStorage.getItem('products')) || [];
+
+            const productList = document.getElementById("product-list");
+            
+            // If no products are available
+            if (products.length === 0) {
+                productList.innerHTML = "<p>No products listed yet.</p>";
+            } else {
+                // Loop through and display products
+                products.forEach(product => {
+                    const productDiv = document.createElement('div');
+                    productDiv.classList.add('product-box');
+                    productDiv.innerHTML = `
+                        <h3>${product.name}</h3>
+                        <p>Price: $${product.price}</p>
+                        <p>Quantity Available: ${product.quantity} units</p>
+                        <p>Seller's Phone: ${product.phone}</p>
+                    `;
+                    productList.appendChild(productDiv);
+                });
+            }
+        };
+    </script>
+
+</body>
+</html>
